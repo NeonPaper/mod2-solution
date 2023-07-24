@@ -1,0 +1,80 @@
+/*Resets default box model settings*/
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0
+}
+/*Styles the Background*/
+body {
+	background-color: #FF8C4E;
+	
+}
+
+/*Aligns Our Menu to center*/
+h1 {
+	text-align: center;
+	margin: 20px;
+
+}
+
+/*Adds padding around lorem and drops it below heading*/
+p{
+	color: white;
+	padding: 5px;
+	clear: both;
+}
+
+.beef{
+	background-color: #FF9A00;
+
+}
+.chicken{
+	background-color: #4681C3;
+}
+.sushi{
+	background-color: #00A875;
+}
+.beef, .chicken, .sushi{
+	float: right;
+	margin-top: 0px;
+	padding-left: 30px;
+	padding-right: 30px;
+}
+section{
+	background-color: #0A54A6;
+	margin: 1%;
+	border: 2px solid black;
+}
+
+.d1, .d2, .d3{
+	display: inline-block;
+	width: calc(33.33% - 30px);
+}
+
+/* Media queries for responsive layout */
+		/* Desktop */
+		@media screen and (min-width: 992px) {
+			.d1, .d2, .d3 {
+				width: calc(33.33% - 30px);
+			}
+		}
+
+		/* Tablet */
+		@media screen and (min-width: 768px) and (max-width: 991px) {
+  			.d1, .d2 {
+  				 width: calc(50% - 15px); /* Adjust width to create some spacing between d1 and d2 */
+  		}
+  			.d3 {
+    			width: calc(100% - 30px); /* Full width with margins accounted for */
+  }
+}
+
+		/* Phone */
+		@media screen and (max-width: 767px) {
+			.d1, .d2, .d3 {
+				width: 100%;
+				float: none;
+				clear: both;
+			}
+		}
+
